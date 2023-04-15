@@ -6,3 +6,7 @@ const UserSchema = new mongoose.Schema({
 	avatar: { type: String, required: true },
 	allProperties: [{ type: mongoose.SchemaTypes.ObjectId, ref: "Property" }],
 });
+
+const userModel = mongoose.model("User", UserSchema);
+
+export default userModel;
